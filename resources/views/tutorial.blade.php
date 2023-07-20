@@ -1,0 +1,34 @@
+@extends('layouts.layoutMaster')
+
+@section('content')
+    <div class="container">
+        <div class="row mt-4">
+            @include('layouts.flashMessage')
+        </div>
+    </div>
+
+    <style>
+        .container-frame {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+            /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        }
+
+        /* Then style the iframe to fit in the container div with full height and width */
+        .responsive-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <div class="container-frame mb-4">
+        <iframe class="responsive-iframe" src="{{ asset('assets/tutorial/tutorial.mp4') }}"></iframe>
+    </div>
+@endsection

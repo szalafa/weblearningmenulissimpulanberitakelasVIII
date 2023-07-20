@@ -1,0 +1,109 @@
+/* Aturan CSS untuk tampilan default */
+section h1 {
+  text-align: center;
+  font-size: 6rem ;
+  font-family: sans-serif;
+}
+
+.parallax h1 {
+  width: 60%;
+  font-size: 2rem;
+}
+
+/* Aturan CSS untuk tampilan tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  section h1 {
+    font-size: 30x !important;
+  }
+  .parallax h1{
+    font-size: 30px !important;
+  }
+}
+
+/* Aturan CSS untuk tampilan desktop */
+@media only screen and (min-width: 1025px) {
+  section h1{
+    font-size: 35px  ;
+  }
+  .parallax{
+    font-size: 35px;
+  }
+}
+
+/* Aturan CSS untuk tampilan HP */
+@media only screen and (max-width: 480px) {
+  section h1{
+    font-size: 20px;
+  }
+  .parallax h1{
+    font-size: 20px;
+  }
+}
+
+.isi{
+    height: 100vh; /* Atur ketinggian scroll container menjadi 70% dari tinggi viewport */
+    overflow-y: scroll; /* Atur overflow-y ke scroll */
+    overflow-y: hidden;
+  }
+
+main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* overflow-y: auto; */
+  perspective: 2px;
+}
+
+section {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+
+/* Bagian 1 */
+.no-parallax {
+  z-index: 999;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("https://img.freepik.com/free-vector/welcome-concept-landing-page_52683-22946.jpg?w=900&t=st=1681749411~exp=1681750011~hmac=a6835e9f028ad305beff479270565063b14e8a6dc017746c6f42d39f96b160dc");
+background-size: cover;
+}
+/* Batas Bagian 1 */
+
+
+/* Bagian 2 */
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: 899;
+
+  
+}
+
+.bg::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://img.freepik.com/free-vector/online-certification_23-2148576444.jpg?w=740&t=st=1681749821~exp=1681750421~hmac=60a1599de79717bb6379de50d4a46df9102d7f34ce81bc9c19000c2d7a4aa372");
+  background-size: cover;
+}
+/* Batas bagian 2 */
+
+/* Bagian 3 */
+.on-parallax{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("https://img.freepik.com/free-vector/female-student-listening-webinar-online_74855-6461.jpg?w=996&t=st=1681750085~exp=1681750685~hmac=87420ff6e20a86df156f0c1f3ff75de9211eb88d820c52f9747cf8ca7f900992");
+background-size: cover;
+  z-index: 799;  
+}
+/* batas bagian 3 */
+

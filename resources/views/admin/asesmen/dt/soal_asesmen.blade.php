@@ -1,0 +1,1 @@
+{!! $model->soal_asesmen !!}
